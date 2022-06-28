@@ -1,0 +1,1 @@
+listArticle.blade.php
