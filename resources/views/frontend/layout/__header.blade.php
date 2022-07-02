@@ -120,7 +120,7 @@
                     <p class="desc-cart">
                         <a title="Giỏ hàng" href="./my-shoppingcart.html">
                             <i class="fa fa-shopping-cart"></i>&nbsp;<span class="countShoppingCartPopup">
-                            </span> sản phẩm đã chọn
+                            </span> Sản phẩm đã chọn
                         </a>
                     </p>
                     <span class="hidden strFavouriteProductId">
