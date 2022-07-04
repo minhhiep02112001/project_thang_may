@@ -1,6 +1,8 @@
 @extends('admin.layout.__index')
 
-@section('css')
+@section('css') 
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
     <style type="text/css">
         .wrap {
             margin: 10% auto;
@@ -324,9 +326,6 @@
 
                                     @foreach($categories as $item)
                                         <option value="{{ $item->id }}" {{ $item->id == $product->category_id ?'selected':'' }}>{{ $item->name }}</option>
-                                        @foreach($item->categoryChildrens()->get() as  $key => $value)
-                                            <option value="{{ $value->id }}" {{ $value->id == $product->category_id ?'selected':'' }}> -- {{ $value->name }}</option>
-                                        @endforeach
                                     @endforeach
                                 </select>
                                 @if($errors->has('category_id'))
@@ -424,6 +423,14 @@
 @endsection
 
 @section('js')
+
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('select[name="category_id"], select[name="brand_id"], select[name="vendor_id"]').select2();
+    });
+</script>
+
     <script type="text/javascript">
         $(function () {
 

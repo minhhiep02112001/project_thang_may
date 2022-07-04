@@ -52,10 +52,7 @@ class ProductController extends Controller
     public function create()
     {
         //
-        $categories = Category::where([
-            'parent_id' => 0,
-            'type' => 0
-        ])->get();
+        $categories = Category::where('type' , '!=' , 2)->select('id' , 'name')->get();
         $vendors = Vendor::all();
         $brands = Brand::all();
         return view('admin.product.create', compact('categories', 'vendors', 'brands'));
@@ -182,10 +179,7 @@ class ProductController extends Controller
      */
     public function edit(Product $san_pham)
     {
-        $categories = Category::where([
-            'parent_id' => 0,
-            'type' => 0
-        ])->get();
+        $categories = Category::where('type' , '!=' , 2)->select('id' , 'name')->get();
         $vendors = Vendor::all();
         $brands = Brand::all();
         $product = $san_pham;
@@ -310,7 +304,7 @@ class ProductController extends Controller
             // end update product_images
 
             if ($image != '') {
-                @unlink(old_image); // nếu thay đổi hình ảnh chính trong sản phẩm => xóa hình cũ
+                @unlink($old_image); // nếu thay đổi hình ảnh chính trong sản phẩm => xóa hình cũ
             }
             DB::commit();
 

@@ -1,6 +1,8 @@
 @extends('admin.layout.__index')
 
 @section('css')
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
     <style type="text/css">
         .wrap {
             margin: 10% auto;
@@ -55,8 +57,8 @@
             float: left;
             width: 80px;
             margin: 0 20px 20px 0 !important;
-            padding: 0!important;
-            border: 0!important;
+            padding: 0 !important;
+            border: 0 !important;
             overflow: inherit;
             clear: none;
         }
@@ -70,7 +72,7 @@
             right: -10px;
             top: -10px;
             background: #000;
-            color: #fff!important;
+            color: #fff !important;
             border-radius: 50%;
             z-index: 2;
             display: block;
@@ -79,18 +81,18 @@
             font-size: 16px;
             text-align: center;
             line-height: 18px;
-            cursor: pointer!important;
-            opacity: 1!important;
+            cursor: pointer !important;
+            opacity: 1 !important;
             text-shadow: none;
         }
 
         ul.dandev_attach_view li.li_file_hide {
             opacity: 0;
             visibility: visible;
-            width: 0!important;
-            height: 0!important;
+            width: 0 !important;
+            height: 0 !important;
             overflow: hidden;
-            margin: 0!important;
+            margin: 0 !important;
         }
 
         ul.dandev_attach_view .img-wrap-box {
@@ -104,8 +106,8 @@
 
         .img-wrap-box img {
             right: 0;
-            width: 100%!important;
-            height: 100%!important;
+            width: 100% !important;
+            height: 100% !important;
             bottom: 0;
             left: 0;
             top: 0;
@@ -149,7 +151,7 @@
 
         .list_attach.show-btn span.dandev_insert_attach {
             display: block;
-            margin: 0 0 20px!important;
+            margin: 0 0 20px !important;
         }
 
         i.dandev-plus {
@@ -162,237 +164,260 @@
         ul.dandev_attach_view li input {
             display: none;
         }
-        .details_product_images{
+
+        .details_product_images {
             display: flex;
             justify-content: space-around;
             justify-items: center;
             align-items: center;
             padding: 2px 0px;
         }
-        .images_position{
-            display: block!important;
+
+        .images_position {
+            display: block !important;
             height: 19px;
             width: 60px;
         }
-        .is_active_images{
-            display: block!important;
+
+        .is_active_images {
+            display: block !important;
             width: 20px;
             transform: scale3d(1.5, 1.5, 1.5);
-            margin: 0!important;
+            margin: 0 !important;
         }
     </style>
 @endsection
 
 @section('content')
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <style>
+            . {
+                width: 50%
+            }
+        </style>
+        <section class="content-header">
+            <h1>
+                Thêm Mới Sản Phẩm <a href="{{ route('san-pham.index') }}" class="btn btn-flat btn-success "><i
+                        class="fa fa-list"></i> Danh Sách Sản Phẩm</a>
+            </h1>
+        </section>
 
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <style>. { width: 50% }</style>
-    <section class="content-header">
-        <h1>
-            Thêm Mới Sản Phẩm <a href="{{route('san-pham.index')}}" class="btn btn-flat btn-success "><i
-                    class="fa fa-list"></i> Danh Sách Sản Phẩm</a>
-        </h1>
-    </section>
+        <section class="content">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-9 col-lg-9">
+                    <!-- general form elements -->
 
-    <section class="content">
-        <div class="row">
-            <!-- left column -->
-            <div class="col-md-9 col-lg-9">
-                <!-- general form elements -->
-
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Thông tin sản phẩm</h3>
-                    </div>
-                    <!-- /.box-header -->
-                    <!-- form start -->
-                    <form role="form" action="{{route('san-pham.store')}}" method="post" enctype="multipart/form-data">
-                        @csrf
-                        <div class="box-body">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Tên sản phẩm</label>
-                                <input type="text" class="form-control" id="name" name="name">
-                                 @if($errors->has('name'))
-                                    <p class="text-danger"><strong>Error : </strong> {{ $errors->first('name') }}</p>
-                                @endif
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputFile">Image :</label>
-                                <div class="input-group input-group-sm">
-                                    <input type="text" class="form-control fileName" disabled="" id="fileName">
-                                    <input class="file-upload-input" name="image" hidden="hidden" style="position:absolute;" type='file' onchange="readURL(this);" accept="image/*" />
-                                    <span class="input-group-btn">
-                                        <button type="button"  onclick="$('.file-upload-input').trigger( 'click' )" class="btn btn-info btn-flat">Add Image</button>
-                                    </span>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Thông tin sản phẩm</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <!-- form start -->
+                        <form role="form" action="{{ route('san-pham.store') }}" method="post"
+                            enctype="multipart/form-data">
+                            @csrf
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Tên sản phẩm</label>
+                                    <input type="text" class="form-control" id="name" name="name">
+                                    @if ($errors->has('name'))
+                                        <p class="text-danger"><strong>Error : </strong> {{ $errors->first('name') }}</p>
+                                    @endif
                                 </div>
+                                <div class="form-group">
+                                    <label for="exampleInputFile">Image :</label>
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" class="form-control fileName" disabled="" id="fileName">
+                                        <input class="file-upload-input" name="image" hidden="hidden"
+                                            style="position:absolute;" type='file' onchange="readURL(this);"
+                                            accept="image/*" />
+                                        <span class="input-group-btn">
+                                            <button type="button" onclick="$('.file-upload-input').trigger( 'click' )"
+                                                class="btn btn-info btn-flat">Add Image</button>
+                                        </span>
+                                    </div>
 
-                                <div class="file-upload-content text-center ">
+                                    <div class="file-upload-content text-center ">
 
+                                    </div>
+                                    @if ($errors->has('image'))
+                                        <p class="text-danger"><strong>Error : </strong> {{ $errors->first('image') }}</p>
+                                    @endif
                                 </div>
-                                @if($errors->has('image'))
-                                    <p class="text-danger"><strong>Error : </strong> {{ $errors->first('image') }}</p>
-                                @endif
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label for="exampleInputEmail1">Ảnh Kèm Theo Và Vị Trí , Hiển Thị:</label>
-                                </div>
-                                <div class="col-md-12 p-b-5" style="padding-bottom:10px;">
-                                    <div class="dandev-reviews">
-                                        <div class="list_attach">
-                                            <ul class="dandev_attach_view">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="exampleInputEmail1">Ảnh Kèm Theo Và Vị Trí , Hiển Thị:</label>
+                                    </div>
+                                    <div class="col-md-12 p-b-5" style="padding-bottom:10px;">
+                                        <div class="dandev-reviews">
+                                            <div class="list_attach">
+                                                <ul class="dandev_attach_view">
 
-                                            </ul>
-                                            <span class="dandev_insert_attach"><i class="dandev-plus">+</i></span>
+                                                </ul>
+                                                <span class="dandev_insert_attach"><i class="dandev-plus">+</i></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputFile">Số lượng :</label>
-                                <input type="number" class="form-control " id="stock" name="stock" value="1" min="0">
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputFile">Giá gốc (vnđ) :</label>
-                                        <input type="number" class="form-control" id="price" name="price" value="0" min="0">
-                                    </div>
+                                <div class="form-group">
+                                    <label for="exampleInputFile">Số lượng :</label>
+                                    <input type="number" class="form-control " id="stock" name="stock" value="1"
+                                        min="0">
                                 </div>
-                                <!-- /.col-lg-6 -->
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputFile">Giá khuyến mại (vnđ) :</label>
-                                        <input type="number" class="form-control" id="sale" name="sale" value="0" min="0">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">Giá gốc (vnđ) :</label>
+                                            <input type="number" class="form-control" id="price" name="price"
+                                                value="0" min="0">
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- /.col-lg-6 -->
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputFile"> Màu :</label>
-                                        <input type="text" class="form-control" id="color" name="color" placeholder="null">
+                                    <!-- /.col-lg-6 -->
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">Giá khuyến mại (vnđ) :</label>
+                                            <input type="number" class="form-control" id="sale" name="sale"
+                                                value="0" min="0">
+                                        </div>
                                     </div>
+                                    <!-- /.col-lg-6 -->
                                 </div>
-                                <!-- /.col-lg-6 -->
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputFile">Bộ Nhớ :</label>
-                                        <input type="text" class="form-control" id="memory" name="memory" placeholder="null">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputFile"> Màu :</label>
+                                            <input type="text" class="form-control" id="color" name="color"
+                                                placeholder="null">
+                                        </div>
                                     </div>
+                                    <!-- /.col-lg-6 -->
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">Bộ Nhớ :</label>
+                                            <input type="text" class="form-control" id="memory" name="memory"
+                                                placeholder="null">
+                                        </div>
+                                    </div>
+                                    <!-- /.col-lg-6 -->
                                 </div>
-                                <!-- /.col-lg-6 -->
-                            </div>
-                            <div class="form-group">
-                                <label>Danh mục sản phẩm :</label>
-                                <select class="form-control " name="category_id">
-                                    <option value="0">-- chọn Danh Mục --</option>
-                                    @foreach($categories as $item)
-                                        <option value="{{ $item->id }}">{{ $item->name }}</option>
-                                        @foreach($item->categoryChildrens()->get() as  $key => $value)
-                                            <option value="{{ $value->id }}"> -- {{ $value->name }}</option>
+                                <div class="form-group">
+                                    <label>Danh mục sản phẩm :</label>
+                                    <select class="form-control " name="category_id">
+                                        <option value="0">-- chọn Danh Mục --</option>
+                                        @foreach ($categories as $item)
+                                            <option value="{{ $item->id }}" {{(old('category_id') && old('category_id') == $item->id)? 'selected' :''}}>{{ $item->name }}</option> 
                                         @endforeach
-                                    @endforeach
-                                </select>
-                                @if($errors->has('category_id'))
-                                    <p class="text-danger"><strong>Error : </strong> {{ $errors->first('category_id') }}</p>
-                                @endif
-                            </div>
-                            <div class="form-group">
-                                <label>Thương hiệu :</label>
-                                <select class="form-control " name="brand_id">
-                                    <option value="0">-- chọn Thương Hiệu--</option>
-                                    @foreach($brands as $brand)
-                                        <option value="{{ $brand->id }}">{{ $brand->name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Nhà cung cấp :</label>
-                                <select class="form-control " name="vendor_id">
-                                    <option value="0">-- chọn NCC --</option>
-                                    @foreach($vendors as $vendor)
-                                        <option value="{{ $vendor->id }}">{{ $vendor->name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Mã hàng (SKU)</label>
-                                <input type="text" class="form-control " id="sku" name="sku" placeholder="">
-                                 @if($errors->has('sku'))
-                                    <p class="text-danger"><strong>Error : </strong> {{ $errors->first('sku') }}</p>
-                                @endif
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Vị trí</label>
-                                <input type="number" class="form-control " id="position" name="position" value="0" min="0">
-                            </div>
+                                    </select>
+                                    @if ($errors->has('category_id'))
+                                        <p class="text-danger"><strong>Error : </strong>
+                                            {{ $errors->first('category_id') }}</p>
+                                    @endif
+                                </div>
+                                <div class="form-group">
+                                    <label>Thương hiệu :</label>
+                                    <select class="form-control " name="brand_id">
+                                        <option value="0">-- chọn Thương Hiệu--</option>
+                                        @foreach ($brands as $brand)
+                                            <option value="{{ $brand->id }}" {{(old('brand_id') && old('brand_id') == $brand->id)? 'selected' :''}}>{{ $brand->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Nhà cung cấp :</label>
+                                    <select class="form-control " name="vendor_id">
+                                        <option value="0">-- chọn NCC --</option>
+                                        @foreach ($vendors as $vendor)
+                                            <option value="{{ $vendor->id }}" {{(old('vendor_id') && old('vendor_id') == $vendor->id)? 'selected' :''}}>{{ $vendor->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Mã hàng (SKU)</label>
+                                    <input type="text" class="form-control " id="sku" name="sku"
+                                        placeholder="">
+                                    @if ($errors->has('sku'))
+                                        <p class="text-danger"><strong>Error : </strong> {{ $errors->first('sku') }}</p>
+                                    @endif
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Vị trí</label>
+                                    <input type="number" class="form-control " id="position" name="position"
+                                        value="0" min="0">
+                                </div>
 
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Liên kết (url) tùy chỉnh</label>
-                                <input type="text" class="form-control" id="url" name="url" placeholder="">
-                                 @if($errors->has('url'))
-                                    <p class="text-danger"><strong>Error : </strong> {{ $errors->first('url') }}</p>
-                                @endif
-                            </div>
-                            <div class="form-group">
-                                <label>Tóm tắt :</label>
-                                <textarea id="editor2" name="summary" class="form-control" rows="10" ></textarea>
-                            </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Liên kết (url) tùy chỉnh</label>
+                                    <input type="text" class="form-control" id="url" name="url"
+                                        placeholder="">
+                                    @if ($errors->has('url'))
+                                        <p class="text-danger"><strong>Error : </strong> {{ $errors->first('url') }}</p>
+                                    @endif
+                                </div>
+                                <div class="form-group">
+                                    <label>Tóm tắt :</label>
+                                    <textarea id="editor2" name="summary" class="form-control" rows="10"></textarea>
+                                </div>
 
-                            <div class="form-group">
-                                <label>Nội dung</label>
-                                <textarea id="editor1" name="description" class="form-control" rows="10" ></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Meta Title</label>
-                                <input type="text" class="form-control" id="meta_title" name="meta_title" >
-                                 @if($errors->has('meta_title'))
-                                    <p class="text-danger"><strong>Error : </strong> {{ $errors->first('meta_title') }}</p>
-                                @endif
-                            </div>
-                            <div class="form-group">
-                                <label>Meta Description</label>
-                                <textarea name="meta_description" class="form-control" rows="3" ></textarea>
-                            </div>
+                                <div class="form-group">
+                                    <label>Nội dung</label>
+                                    <textarea id="editor1" name="description" class="form-control" rows="10"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Meta Title</label>
+                                    <input type="text" class="form-control" id="meta_title" name="meta_title">
+                                    @if ($errors->has('meta_title'))
+                                        <p class="text-danger"><strong>Error : </strong>
+                                            {{ $errors->first('meta_title') }}</p>
+                                    @endif
+                                </div>
+                                <div class="form-group">
+                                    <label>Meta Description</label>
+                                    <textarea name="meta_description" class="form-control" rows="3"></textarea>
+                                </div>
 
 
-                            <div class="form-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" value="1" name="is_hot"> <b>Sản phẩm Hot</b>
-                                    </label>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="1" name="is_hot"> <b>Sản phẩm Hot</b>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="1" name="is_active"> <b>Hiển thị</b>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" value="1" name="is_active"> <b>Hiển thị</b>
-                                    </label>
-                                </div>
+                            <!-- /.box-body -->
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary btn-create-product">Tạo</button>
+                                <input type="reset" class="btn btn-default pull-right" value="Reset">
                             </div>
-                        </div>
-                        <!-- /.box-body -->
-                        <div class="box-footer">
-                            <button type="submit" class="btn btn-primary btn-create-product">Tạo</button>
-                            <input type="reset" class="btn btn-default pull-right" value="Reset">
-                        </div>
-                    </form>
+                        </form>
+                    </div>
+                    <!-- /.box -->
                 </div>
-                <!-- /.box -->
+                </form>
             </div>
-            </form>
-        </div>
-        <!-- /.row -->
-    </section>
-</div>
+            <!-- /.row -->
+        </section>
+    </div>
 @endsection
 
 @section('js')
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('select[name="category_id"], select[name="brand_id"], select[name="vendor_id"]').select2();
+        });
+    </script>
     <script type="text/javascript">
-        $(function () {
+        $(function() {
 
             // setup textarea sử dụng plugin CKeditor
             var _ckeditor = CKEDITOR.replace('editor1', {
@@ -402,33 +427,32 @@
                 filebrowserUploadUrl: '{{ asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}',
                 filebrowserImageUploadUrl: '{{ asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
                 filebrowserFlashUploadUrl: '{{ asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}'
-            } );
+            });
             _ckeditor.config.height = 500; // thiết lập chiều cao
             var _ckeditor = CKEDITOR.replace('editor2');
             _ckeditor.config.height = 200; // thiết lập chiều cao
-        })
+        });
     </script>
 
     <script type="text/javascript">
-
-        $(document).on('click' , '.is_active_images' , function() {
-            if($(this).prop('checked') == true){
-                $(this).next().attr('disabled','disabled');
-            }else{
+        $(document).on('click', '.is_active_images', function() {
+            if ($(this).prop('checked') == true) {
+                $(this).next().attr('disabled', 'disabled');
+            } else {
                 $(this).next().removeAttr('disabled');
             }
         });
-        $('.btn-create-product').click(function(event){
+        $('.btn-create-product').click(function(event) {
 
-                $('.is_active_images').each(function(index) {
-                    if($(this).is(':checked')){
-                        $(this).next().attr('disabled','disabled');
-                    }else{
-                        $(this).next().removeAttr('disabled');
-                    }
-                });
-
+            $('.is_active_images').each(function(index) {
+                if ($(this).is(':checked')) {
+                    $(this).next().attr('disabled', 'disabled');
+                } else {
+                    $(this).next().removeAttr('disabled');
+                }
             });
+
+        });
 
         $('.dandev_insert_attach').click(function() {
             /*if ($('.list_attach').hasClass('show-btn') === false) {
@@ -444,10 +468,14 @@
             _html += ' <div class="img-wrap-box"></div>';
             _html += '</div>';
             _html += '<div class="' + _time + '">';
-            _html += '<input type="file" name="product_images[]" class="hidden"  onchange="uploadImg(this)" id="files_' + _time + '"   />';
+            _html +=
+                '<input type="file" name="product_images[]" class="hidden"  onchange="uploadImg(this)" id="files_' +
+                _time + '"   />';
             _html += '<div class="details_product_images">';
-            _html += '<input type="number" name="images_position[]" placeholder="Vị trí" min="0"  value="0" class="images_position">';
-            _html += '<input type="checkbox" name="is_active_images[]" class="is_active_images" value="1" checked >';
+            _html +=
+                '<input type="number" name="images_position[]" placeholder="Vị trí" min="0"  value="0" class="images_position">';
+            _html +=
+                '<input type="checkbox" name="is_active_images[]" class="is_active_images" value="1" checked >';
             _html += '<input hidden="hidden" name="is_active_images[]" value="0" class="is_hidden_active">';
             _html += '</div>';
 
