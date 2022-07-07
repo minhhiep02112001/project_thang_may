@@ -40,10 +40,11 @@
     <div class="footer-coppyright">
         <div class="container">
             <div class="coppyright">
-                © 2021 Copyright by thangmaydep. All rights reserved.
+                © 2021 Copyright by thangmaychat. All rights reserved.
             </div>
         </div>
     </div>
+    
     <div id="ctl00_foot_ctl00_facebook">
         <script>
             window.fbAsyncInit = function() {
@@ -115,7 +116,7 @@
         }
 
         .giuseart-nav ul>li a i.ticon-heart {
-            background: url(/images/icons/icon-map.png) no-repeat;
+            background: url({{ asset('/thangmaydep/layout/images/icons/icon-map.png') }}) no-repeat;
             background-size: contain;
             width: 36px;
             height: 36px;
@@ -123,7 +124,7 @@
         }
 
         .giuseart-nav ul>li a i.ticon-zalo-circle2 {
-            background: url(/images/icons/icon-zalo.png) no-repeat;
+            background: url({{ asset('/thangmaydep/layout/images/icons/icon-zalo.png') }}) no-repeat;
             background-size: contain;
             width: 36px;
             height: 36px;
@@ -135,7 +136,7 @@
         }
 
         .giuseart-nav ul>li a i.ticon-angle-up {
-            background: url(/images/icons/icon-angle-up.png) no-repeat;
+            background: url({{ asset('/thangmaydep/layout/images/icons/icon-angle-up.png') }}) no-repeat;
             background-size: contain;
             width: 36px;
             height: 36px;
@@ -170,7 +171,7 @@
         }
 
         .giuseart-nav ul>li a i.ticon-messenger {
-            background: url(/images/icons/icon-messenger.png) no-repeat;
+            background: url({{ asset('/thangmaydep/layout/images/icons/icon-messenger.png') }}) no-repeat;
             background-size: contain;
             width: 36px;
             height: 36px;
@@ -185,7 +186,7 @@
         }
 
         .giuseart-nav ul>li a i.ticon-chat-sms {
-            background: url(/images/icons/icon-sms.jpg) no-repeat;
+            background: url({{ asset('/thangmaydep/layout/images/icons/icon-sms.jpg') }}) no-repeat;
             background-size: contain;
             width: 38px;
             height: 36px;
@@ -193,7 +194,7 @@
         }
 
         .giuseart-nav ul>li a i.icon-phone-w {
-            background: url(/images/icons/icon-phone.png) no-repeat;
+            background: url({{ asset('/thangmaydep/layout/images/icons/icon-phone.png') }}) no-repeat;
             background-size: contain;
         }
 
