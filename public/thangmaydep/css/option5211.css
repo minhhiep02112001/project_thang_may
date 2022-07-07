@@ -2477,11 +2477,6 @@ blockquote ol {
     line-height: 30px;
 }
 
-.goi-home {
-    text-transform: uppercase;
-    position: relative;
-    text-align: right;
-}
 
 .btn-info.btn-cal {
     background-color: #000;
@@ -3460,7 +3455,7 @@ blockquote ol {
 }
 
 .ftco-media-1 h3 {
-    font-size: 22px;
+    font-size: 19px;
     color: #000;
     margin-bottom: 0;
     line-height: 28px;
@@ -3564,7 +3559,7 @@ blockquote ol {
 }
 
 .site-section {
-    padding: 2.5em 0;
+    padding: 2.5em 0 0;
 }
 
     .site-section.site-about {
@@ -3864,6 +3859,7 @@ textarea.form-control {
 
 .how-it-works.bg-primary {
     background-color: #71bf44 !important;
+    margin-top: 3rem;
 }
     .how-it-works.bg-primary .section-title a, .how-it-works .text-center .second-step .text-dark a {
         color: #fff;
@@ -4180,7 +4176,7 @@ textarea.form-control {
         bottom: 30px;
         text-align: right;
         opacity: 0;
-        /*/*font-size: 14px;*/ */ line-height: 24px;
+         line-height: 24px;
         color: #ffffff;
         font-weight: 400;
         text-transform: uppercase;
@@ -4489,7 +4485,7 @@ textarea.form-control {
     .project-detail .lower-content p {
         position: relative;
         display: block;
-        /*/*font-size: 14px;*/ */ line-height: 28px;
+         line-height: 28px;
         color: #666666;
         font-weight: 400;
         margin-bottom: 30px;
@@ -4519,7 +4515,7 @@ textarea.form-control {
 
     .project-detail .info-list li {
         position: relative;
-        /*/*font-size: 14px;*/ */ line-height: 28px;
+         line-height: 28px;
         color: #666666;
         font-weight: 400;
     }

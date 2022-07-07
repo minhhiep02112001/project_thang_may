@@ -1,38 +1,21 @@
 <footer class="footer3">
     <div class="container">
         <div class="footer-top">
-            <div class="footer-bottom-left">
-                <div class="widget-container">
-                    <ul>
-                        <li><a target="_self" href="./trang-chu.html">Trang chủ</a></li>
-                        <li><a target="_self" href="./gioi-thieu.html">Giới thiệu</a></li>
-                        <li><a target="_self" href="./san-pham.html">Sản phẩm</a></li>
-                        <li><a target="_self" href="./du-an.html">Dự án</a></li>
-                        <li><a target="_self" href="./tin-tuc.html">Tin tức</a></li>
-                        <li><a target="_self" href="./lien-he.html">Liên hệ</a></li>
-                    </ul>
-                </div>
+            <div class="footer-lelf">
+                <ul class="d-flex">
+                    <li><a target="_self" href="/">Trang chủ</a></li>
+                    <li><a target="_self" href="./gioi-thieu.html">Giới thiệu</a></li>
+                    <li><a target="_self" href="./san-pham.html">Sản phẩm</a></li>
+                    <li><a target="_self" href="./du-an.html">Dự án</a></li>
+                    <li><a target="_self" href="./tin-tuc.html">Tin tức</a></li>
+                    <li><a target="_self" href="./lien-he.html">Liên hệ</a></li>
+                </ul>
             </div>
-            <div class="widget-container">
-                <div id="address-box">
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-bottom-right">
-                <div class="widget-container">
-                    <div class="social-link">
-                        <a target="_blank" rel="nofollow"
-                            href="https://www.facebook.com/bacviet.thietkewebsite/"><i
-                                class="fa fa-facebook"></i></a><a target="_blank" rel="nofollow"
-                            href="https://www.instagram.com"><i class="fa fa-instagram"></i></a><a
-                            target="_blank" rel="nofollow" href="https://twitter.com"><i
-                                class="fa fa-twitter"></i></a><a target="_blank" rel="nofollow"
-                            href="https://www.youtube.com"><i class="fa fa-youtube"></i></a><a
-                            target="_blank" rel="nofollow" href="https://www.linkedin.com"><i
-                                class="fa fa-linkedin"></i></a><a href="./rss.html"><i
-                                class="fa fa-rss"></i></a>
-                    </div>
+            <div class="footer-right">
+                <div class="footer-bottom-social text-center d-f">
+                    <a target="_blank" rel="nofollow" href="https://www.facebook.com/DucThanhPr"><i class="fa fa-facebook"></i></a>
+                    <a target="_blank" rel="nofollow" href="https://www.instagram.com/xt.ducthanh/"><i class="fa fa-instagram"></i></a>
+                    <a target="_blank" rel="nofollow"href="https://www.youtube.com"><i class="fa fa-youtube"></i></a>
                 </div>
             </div>
         </div>

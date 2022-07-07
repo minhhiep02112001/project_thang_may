@@ -1,106 +1,182 @@
 @extends('frontend.layout.__index')
+
+<!-- @section('css')
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" />
+@endsection -->
+
 @section('content')
-    <section id="content">
-        <section>
-            <div class="contact-info">
-                <div class="map-contact">
-                    <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=21 xuân đỉnh&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.kokagames.com/fnf-friday-night-funkin-mods/">Friday Night Funkin Mods</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:50vh;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:50vh;}.gmap_iframe {width: 100% !important;height:50vh!important;}</style></div>
-                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.1074314504044!2d105.89592241501985!3d21.068370985976856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a978c17c3499%3A0x67cbc2d9835e9b82!2zQ8OUTkcgVFkgVE5ISCBHSeG6okkgUEjDgVAgVsOAIEPDlE5HIE5HSOG7hiBC4bquQyBWSeG7hlQ!5e0!3m2!1svi!2s!4v1484536168284" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe> -->
-                </div>
+<section id="content">
+                
+    
+<section class="columns-container">
+      
+    <div class="bg-breadcrumb">
+        <div class="container" id="columnstop">
+            <div class="breadcrumb clearfix">
+                <a class="home" href="/" title="Trang chủ">Trang chủ</a><span class="navigation-pipe">&nbsp;</span><a class="home" href="/mau-web/5211/lien-he.html" title="Liên hệ">Liên hệ</a>
             </div>
-        </section>
-        <!--Page Info-->
-        <section class="page-info">
-            <div class="auto-container clearfix">
-                <div class="pull-left">
-                    <h2>
-                        Liên hệ</h2>
-                    <h1 style="position:absolute; z-index:-100000; visibility:hidden; width:1px">Liên hệ</h1>
-                </div>
-                <div class="pull-right">
-                    <ul class="bread-crumb clearfix"><li><a class="home" href="/" title="Trang chủ"><i class="fa fa-home"></i></a></li><li><a class="home" href="/lien-he.html" title="Liên hệ">Liên hệ</a></li></ul>
-                </div>
+        </div>
+    </div>
+    <div class="container" id="columns">
+        <h1 style="position:absolute; z-index:-100000; visibility:hidden; width:1px">Liên hệ</h1>
+        <h2 class="page-heading"><span class="page-heading-title2">
+            Liên hệ</span>
+        </h2>
+        <div id="contact" class="page-content page-contact">
+            <div id="message-box-conact">
+                
             </div>
-        </section>
-        <!--End Page Title-->
-        <!-- page-title end-->
-        <section class="contact-section">
-            <div class="auto-container">
-                <div class="contact-img wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    <div class="row">
-                        <div class="map-column col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <div class="inner-column info">
-                                <p><strong>Tài khoản giao dịch:</strong></p>
-                                <p><strong>1. Ngân hàng Đầu tư và Phát triển (BIDV)</strong><br>
-                                    - Chủ tài khoản: Công ty TNHH Giải pháp và Công nghệ Bắc Việt<br>
-                                    - Số tài khoản: 15010000323649<br>
-                                    - Chi nhánh: Bắc Hà Nội</p>
-                                <p><strong>2. Ngân hàng Ngoại Thương Việt Nam (VietComBank)</strong><br>
-                                    - Chủ tài khoản: Lê Bá Việt Tùng<br>
-                                    - Số tài khoản: 0491001462611 - Chi nhánh Thăng Long - Hà Nội</p>
-                                <p><strong>Giờ làm việc:</strong><br>
-                                    - Từ thứ Hai đến thứ Sáu + Sáng thứ Bảy<br>
-                                    - Sáng : 08:00 am - 12:00 am<br>
-                                    - Chiều: 01:30 pm - 05:30 pm&nbsp;</p>
-                            </div>
-                        </div>
-                        <div class="form-column col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <div class="inner-column">
-                                <img loading="lazy" class="img-fluid" src="{{asset('frontend/imgcategory/20191007143744_34124.jpg')}}" alt="Liên hệ">
-                            </div>
-                        </div>
+            <div class="form-send-contact">
+                
+<style type="text/css">
+    .btnsend_contact{
+       max-width: 130px;
+        float: left;
+        margin-right: 10px !important;
+        display:inline-block;
+    }
+    #btnSentWait
+    {
+        display: none;
+        position:absolute;
+        left:150px;
+    }
+</style>
+<section class="why-choise box-parallax">
+    <section class="sky-form clearfix" style="padding: 5px 10px;">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="input">
+                    <input name="ctl00$ContentPlaceHolder1$PageView1$ctl00$ssend$TextBoxHoTenContact" type="text" id="ctl00_ContentPlaceHolder1_PageView1_ctl00_ssend_TextBoxHoTenContact" class="TextBoxHoTenContact" placeholder="Họ và tên" style="width:100%;padding-left: 38px;" />
+                    <div class="icon-prepend">
+                        <i class="fa fa-users"></i>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="map-column col-lg-5 col-md-6 col-sm-12 col-xs-12 wow fadeUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="inner-column">
-
-                            Kết nối: <ul class="social-icon-two"><li><a target="_blank" rel="nofollow" href="https://www.facebook.com/bacviet.thietkewebsite/"><i class="fa fa-facebook"></i></a></li><li><a target="_blank" rel="nofollow" href="https://plus.google.com"><i class="fa fa-instagram"></i></a></li><li><a target="_blank" rel="nofollow" href="https://twitter.com"><i class="fa fa-twitter"></i></a></li><li><a target="_blank" rel="nofollow" href="https://www.youtube.com"><i class="fa fa-youtube"></i></a></li><li><a target="_blank" rel="nofollow" href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li></ul>
-
-                        </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="input">
+                    <input name="ctl00$ContentPlaceHolder1$PageView1$ctl00$ssend$TextBoxEmailContact" type="text" id="ctl00_ContentPlaceHolder1_PageView1_ctl00_ssend_TextBoxEmailContact" class="TextBoxEmailContact" placeholder="Địa chỉ Email" style="width:100%;padding-left: 38px;" />
+                    <div class="icon-prepend">
+                        <i class=" fa fa-envelope"></i>
                     </div>
-                    <div class="form-column col-lg-7 col-md-6 col-sm-12 col-xs-12 wow fadeUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="inner-column">
-                            <div class="form-box default-form">
-                                <div class="contact-form default-form">
-                                    <div class="sky-form">
-                                        <div class="row clearfix">
-                                            <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                                <input name="ctl00$ContentPlaceHolder1$PageView1$ctl00$TextBoxHoTenContact" type="text" id="ctl00_ContentPlaceHolder1_PageView1_ctl00_TextBoxHoTenContact" class="contact_username" placeholder="Họ và tên (*)" required="">
-                                            </div>
-                                            <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                                <input name="ctl00$ContentPlaceHolder1$PageView1$ctl00$TextBoxPhoneContact" type="text" id="ctl00_ContentPlaceHolder1_PageView1_ctl00_TextBoxPhoneContact" class="contact_phone" placeholder="Di động (*)" required="">
-                                            </div>
-                                            <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                                <input name="ctl00$ContentPlaceHolder1$PageView1$ctl00$TextBoxEmailContact" type="text" id="ctl00_ContentPlaceHolder1_PageView1_ctl00_TextBoxEmailContact" class="contact_email" placeholder="Địa chỉ Email (*)" required="">
-                                            </div>
-                                            <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                                <input name="ctl00$ContentPlaceHolder1$PageView1$ctl00$TextBoxCompanyName" type="text" id="ctl00_ContentPlaceHolder1_PageView1_ctl00_TextBoxCompanyName" class="contact_company" placeholder="Công ty">
-                                            </div>
-                                            <div class="form-group col-lg-12 col-md-12 col-sm-1 col-xs-12">
-                                                <textarea name="ctl00$ContentPlaceHolder1$PageView1$ctl00$TextBoxNoiDungContact" rows="2" cols="20" id="ctl00_ContentPlaceHolder1_PageView1_ctl00_TextBoxNoiDungContact" class="contact_message" placeholder="Nội dung (*)" style="height:120px;width:100%;">    </textarea>
-                                            </div>
-                                            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <input type="hidden" name="ctl00$ContentPlaceHolder1$PageView1$ctl00$HiddenFieldpIdContact" id="ctl00_ContentPlaceHolder1_PageView1_ctl00_HiddenFieldpIdContact" value="31190">
-                                                <a href="javascript:void(0);" class="theme-btn btn-style-three btnsend_contact">Gửi đi</a>
-                                                <div id="message-box-conact">
-                                                    <span id="sencontact_success" style="display:none;color:blue;">Thông tin của bạn đã gửi thành công! Tuy nhiên, nội dung này cần Ban Biên Tập xét duyệt. Cám ơn bạn đã ủng hộ.</span><span id="sencontact_error" style="display:none;color:red;">Thông tin đã được gửi đi. Cám ơn bạn đã quan tâm!</span><span id="sencontact_captcha" style="display:none;color:red;">Khung màu đỏ có (*) là bắt buộc</span>
-                                                </div>
-                                                <div id="btnSentWait">
-                                                    <img src="{{asset('frontend/images/icons/loader.gif')}}" alt="wait image">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-        </section>
+            <div class="col-xs-12 col-sm-4">
+                <div class="input">
+                    <input name="ctl00$ContentPlaceHolder1$PageView1$ctl00$ssend$TextBoxPhoneContact" type="text" id="ctl00_ContentPlaceHolder1_PageView1_ctl00_ssend_TextBoxPhoneContact" class="TextBoxPhoneContact" placeholder="Hotline" style="width:100%;padding-left: 38px;" />
+                    <div class="icon-prepend">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12">
+                <div class="input">
+                    <textarea name="ctl00$ContentPlaceHolder1$PageView1$ctl00$ssend$TextBoxNoiDungContact" rows="2" cols="20" id="ctl00_ContentPlaceHolder1_PageView1_ctl00_ssend_TextBoxNoiDungContact" class="TextBoxNoiDungContact" placeholder="Nội dung" style="height:120px;width:100%;padding-left: 38px; font-weight: 400;"></textarea>
+                    <div class="icon-prepend">
+                        <i class="fa fa-comment"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12">
+                <span id='sencontact_success' style='display:none;color:blue;'>Thông tin của bạn đã gửi thành công! Tuy nhiên, nội dung này cần Ban Biên Tập xét duyệt. Xin cám ơn và mong bạn thường xuyên đóng góp ý kiến.</span><span id='sencontact_error' style='display:none;color:red;'>Thông tin đã được gửi đi. Cám ơn bạn đã quan tâm!</span><span id='sencontact_captcha' style='display:none;color:red;'>Thông tin đã được gửi đến ban biên tập. Cám ơn bạn đã quan tâm!</span>
+                <div id="btnSentWait">
+                    <img src=" {{ asset('thangmaydep/images/loader.gif') }} " alt="wait image" />
+                </div>
+                <a href="javascript:void(0);" class="btn btn-lg btn-danger btnsend_contact">Gửi đi</a>
+            </div>
+        </div>
     </section>
+</section>
+
+                <input type="hidden" name="ctl00$ContentPlaceHolder1$PageView1$ctl00$HiddenFieldpIdContact" id="ctl00_ContentPlaceHolder1_PageView1_ctl00_HiddenFieldpIdContact" value="65202" />
+            </div>
+            <hr />
+            <div class="row ">
+                <div class="col-sm-7">
+                    <p><strong>Công ty cổ phần Thang Máy Chất</strong></p>
+
+                    <p>Địa chỉ: Số 5, Đường Xuân Đỉnh, Xuân Tảo, Bắc Từ Liêm, Hà Nội</p>
+
+                    <p>Email: <a href="mailto:ducvyathanh@gmail.com">ducvyathanh@gmail.com</a></p>
+
+                    <p>Hotline:&nbsp;<a href="tel:0973988848">0392905996</a></p>
+
+                    <p>Website:&nbsp;<a href="http://vinwall.vn/">www.thangmaychat.com</a></p>
+
+                    <div style="clear: both;margin:30px 0;">
+                        
+<style type="text/css">
+    .mangxh {
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+    }
+
+        .mangxh li.xht {
+            list-style: none;
+            display: inline-block;
+            vertical-align: top;
+            padding-right: 5px;
+            text-align: left;
+        }
+
+        .mangxh li .goxl {
+            margin-top: 0;
+        }
+
+    .t {
+        margin-top: -1px;
+    }
+    .xht.fb,
+    .xht.tw {
+            margin-top: 7px;
+        }
+    .xht.bm {
+            margin-top: 3px;
+        }
+    #content .t img {
+        border: 0;
+        width: 40px;
+    }
+    .content-area ul.mangxh li,
+    #product-detail ul.mangxh li {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+        padding-right: 5px !important;
+    }
+</style>
+<section>
+    <ul class="mangxh">
+        <li class="xht fb">
+            <div id="fb-root"></div>
+            <div class="fb-like" data-href="/" data-layout="button_count" data-width="100" data-show-faces="true" data-share="true" data-font="arial"></div>
+        </li>
+        <!-- <li class="xht lin">
+            <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+            <script type="IN/Share" data-url="/"></script>
+        </li>
+        <li class="xht bm">
+            <a data-pin-do="buttonBookmark" data-pin-lang="en" href="https://www.pinterest.com/pin/create/button/" data-url="/"></a>
+            <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+        </li>
+        <li class="xht tw">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="/">Tweet</a>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+        </li> -->
+    </ul>
+</section>
+                    </div>
+                </div>
+                 <div class="col-sm-5" id="contact_form_map">
+                    <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=21 xuân đỉnh&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.kokagames.com/fnf-friday-night-funkin-mods/">Friday Night Funkin Mods</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:50vh;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:100%;}.gmap_iframe {width: 100% !important;height:100%!important;}</style></div>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+            </section>
+  
 @endsection

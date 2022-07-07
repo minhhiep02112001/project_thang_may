@@ -42,7 +42,7 @@
                         <div class="container">
                             <div class="row large-gutters">
                                 @foreach($category->products as $product)
-                                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+                                    <div class="col-md-6 col-lg-3 mb-5 mb-lg-5">
                                         <div class="ftco-media-1">
                                             <div class="ftco-media-1-inner">
                                                 <a href="{{route('shop.product' , ['slug'=> $product->slug])}}"
@@ -107,11 +107,11 @@
                 <div class="site-section site-whyus bg-light" id="ly-do-chon-vinwall">
                     <div class="container">
                         <h2 class="section-title mb-5 text-center"><a href="./ly-do-chon-vinwall.html">Chọn
-                                chất lượng chọn Vinwall</a></h2>
-                        <div class="why-con text-center">
+                                chất lượng chọn Thang Máy Chất</a></h2>
+                        <!-- <div class="why-con text-center">
                             <p style="text-align: center;"><img alt="Lý do chọn chúng tôi"
                                                                 src="./news/ly-do-chon.png"/></p>
-                        </div>
+                        </div> -->
                         <div class="row align-items-stretch">
                                  @foreach($bannerQuality as $key => $item)
                             <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up"
@@ -200,7 +200,7 @@
                                             id='sencontact_captcha' style='display:none;color:red;'>Thông tin đã
                                     được gửi đến ban biên tập. Cám ơn bạn đã quan tâm!</span>
                                         <div id="btnSentWait">
-                                            <img src="./images/loader.gif" alt="wait image"/>
+                                            <img src="{{'thangmaydep/images/loader.gif'}}" alt="wait image"/>
                                         </div>
                                     </div>
                                 </div>
