@@ -49,13 +49,17 @@ function getImageConvert($item , $class = "" , $w = 0, $height = 0){
 if (!function_exists('getParentCategory')) {
     function getParentCategory($category)
     {
+        
         if (empty($category)) return [];
         $category = $category->categoryParent()->select('id', 'name', 'slug', 'parent_id')->first();
+        
         if ($category) {
+           
             $data[] = $category;
             $arr = getParentCategory($category);
             $data = array_merge($data, $arr);
         }
+        
         return $data ?? [];
     }
 }
