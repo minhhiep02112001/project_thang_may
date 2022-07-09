@@ -6530,16 +6530,17 @@ span.notify-right {
 [ 27. Footer style 3 ]
 -------------------*/
 .footer3 {
-    background-color: #222222b5;
+    /* background-color: #222222b5; */
+    background-image: url('../images/bg-foot.png');
     overflow: hidden;
     position: relative;
     /* background-size: cover; */
     background-repeat: repeat;
     background-position: left center;
-    border-top: 1px solid #222;
+    /* border-top: 1px solid #222; */
 }
     .footer3 p {
-        color: #2b2b2a;
+        color: #f58829;
     }
     .footer3 .footer-top {
         padding: 40px 0 20px 0; /*font-size:16px;*/
@@ -6581,7 +6582,7 @@ span.notify-right {
         .footer3 .footer-coppyright .payment-logo {
             width: auto;
             display: inline-block;
-            color: white;
+            color: #999;
         }
 
         /*.footer3 .footer-coppyright .payment-logo {
@@ -6686,7 +6687,7 @@ span.notify-right {
             color: #fff;
         }
         .footer-top a{
-            color: white;
+            color: #f58829;
         }
         .footer-lelf {
             color: white;
@@ -6698,7 +6699,7 @@ span.notify-right {
             column-gap: 30px;
         }
         .footer-right .footer-bottom-social{
-            color: white;
+            color: #999;
             padding: 30px 0 0;
             display: flex;
             column-gap: 40px;

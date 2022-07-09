@@ -101,7 +101,7 @@
 
                     <p>Hotline:&nbsp;<a href="tel:0973988848">0392905996</a></p>
 
-                    <p>Website:&nbsp;<a href="http://vinwall.vn/">www.thangmaychat.com</a></p>
+                    <p>Website:&nbsp;<a href="http://thangmaychat.com">www.thangmaychat.com</a></p>
 
                     <div style="clear: both;margin:30px 0;">
                         
