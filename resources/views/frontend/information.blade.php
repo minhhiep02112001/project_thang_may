@@ -24,7 +24,7 @@
                         <p><span style="color:#FF8C00;"><span
                                     style="font-size:20px;"><strong>VỀ CHÚNG TÔI</strong></span></span></p>
 
-                        <p><span style="font-size:16px;">Công ty cổ phần Vinwall Việt Nam hoạt động trong lĩnh vực sản xuất, nhập khẩu và phân phối các sản phẩm ngành nhựa phục vụ xây dựng, trang trí nội ngoại thất.</span>
+                        <p><span style="font-size:16px;">Thang máy chất hoạt động trong trang trí nội ngoại thất thang máy.</span>
                         </p>
 
                         <p><span style="color:#FF8C00;"><span
@@ -107,7 +107,7 @@
                                         </div>
                                     </div>
                                     <div class="fb-like fb_iframe_widget"
-                                         data-href="http://pro2.thietkewebbacviet.com/gioi-thieu.html"
+                                         data-href="/gioi-thieu.html"
                                          data-layout="button_count" data-width="100" data-show-faces="true"
                                          data-share="true" data-font="arial" fb-xfbml-state="rendered"
                                          fb-iframe-plugin-query="app_id=177818186309740&amp;container_width=0&amp;font=arial&amp;href=http%3A%2F%2Fpro2.thietkewebbacviet.com%2Fgioi-thieu.html&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;width=100">
@@ -121,7 +121,7 @@
                                                 style="border: none; visibility: visible; width: 150px; height: 28px;"
                                                 class=""></iframe></span></div>
                                 </li>
-                                <li class="xht lin">
+                                <!-- <li class="xht lin">
                                     <script src="https://platform.linkedin.com/in.js"
                                             type="text/javascript">lang: en_US</script>
                                     <span class="IN-widget"
@@ -138,31 +138,14 @@
               d="M20,2h-16c-1.1,0-2,0.9-2,2v16c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4C22,2.9,21.1,2,20,2zM8,19h-3v-9h3V19zM6.5,8.8C5.5,8.8,4.7,8,4.7,7s0.8-1.8,1.8-1.8S8.3,6,8.3,7S7.5,8.8,6.5,8.8zM19,19h-3v-4c0-1.4-0.6-2-1.5-2c-1.1,0-1.5,0.8-1.5,2.2V19h-3v-9h2.9v1.1c0.5-0.7,1.4-1.3,2.6-1.3c2.3,0,3.5,1.1,3.5,3.7V19z"></path>
       </g>
     </svg></xdoor-icon>Share</button></span></span>
-                                </li>
-                                <li class="xht bm">
+                                </li> -->
+                                <!-- <li class="xht bm">
                                     <span class="PIN_1656344240492_button_pin PIN_1656344240492_save"
                                           data-pin-log="button_pinit_bookmarklet"
                                           data-pin-href="https://www.pinterest.com/pin/create/button/">Save</span>
 
-                                </li>
-                                <li class="xht tw">
-                                    <iframe id="twitter-widget-0" scrolling="no" frameborder="0"
-                                            allowtransparency="true" allowfullscreen="true"
-                                            class="twitter-share-button twitter-share-button-rendered twitter-tweet-button"
-                                            style="position: static; visibility: visible; width: 73px; height: 20px;"
-                                            title="Twitter Tweet Button"
-                                            src="https://platform.twitter.com/widgets/tweet_button.d7fc2fc075c61f6fa34d79a0cbbf1e34.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Flocalhost%3A63342%2Fthangmay%2Fpublic%2Ffrontend%2Fgioi-thieu.html%3F_ijt%3Dq2u4nlvf79ct33rc630f1i0p5g%26_ij_reload%3DRELOAD_ON_SAVE&amp;size=m&amp;text=Trang%20ch%E1%BB%A7%20Vinwall%20%7C%20Ki%E1%BA%BFn%20t%E1%BA%A1o%20v%E1%BA%BB%20sang%20tr%E1%BB%8Dng&amp;time=1656344241087&amp;type=share&amp;url=http%3A%2F%2Fpro2.thietkewebbacviet.com%2Fgioi-thieu.html"
-                                            data-url="http://pro2.thietkewebbacviet.com/gioi-thieu.html"></iframe>
-                                    <script>!function (d, s, id) {
-                                            var js, fjs = d.getElementsByTagName(s)[0];
-                                            if (!d.getElementById(id)) {
-                                                js = d.createElement(s);
-                                                js.id = id;
-                                                js.src = "//platform.twitter.com/widgets.js";
-                                                fjs.parentNode.insertBefore(js, fjs);
-                                            }
-                                        }(document, "script", "twitter-wjs");</script>
-                                </li>
+                                </li> -->
+                               
                             </ul>
                         </section>
                     </div>

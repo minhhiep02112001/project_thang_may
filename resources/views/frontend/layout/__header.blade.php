@@ -33,7 +33,7 @@
                                     <li><a target="_self" href="{{route('shop.information')}}">Giới thiệu</a></li>
                                     <li class="dropdown">
                                         <a class="dropdown-toggle" data-toggle="dropdown" target="_self"
-                                           href="./san-pham.html"><span>Sản phẩm</span></a>
+                                           href="Javascript:void(0)"><span>Sản phẩm</span></a>
                                         <ul class="dropdown-menu mega_dropdown" role="menu"
                                             style="width: 100%">
                                             @foreach($menus_product as $key=>$item)
@@ -70,7 +70,7 @@
                                     </li>
                                     <li class="dropdown">
                                         <a class="dropdown-toggle" data-toggle="dropdown" target="_self"
-                                           href="./du-an.html"><span>Dự án</span></a>
+                                           href="Javascript:void(0)"><span>Dự án</span></a>
                                         <ul class="dropdown-menu container-fluid">
                                             <li class="block-container">
                                                 <ul class="block">
@@ -92,7 +92,7 @@
                             </div>
                         </div>
                     </nav>
-                    <div id="form-search-opntop">
+                    <!-- <div id="form-search-opntop">
                         <div class="form-inline">
                             <div class="form-group input-serach">
                                 <input name="ctl00$hh$ctl00$TextBoxSearch" type="text"
@@ -101,7 +101,7 @@
                             <a id="ctl00_hh_ctl00_ButtonSearch" class="pull-right btn-search"
                                href="javascript:__doPostBack(&#39;ctl00$hh$ctl00$ButtonSearch&#39;,&#39;&#39;)"></a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="language" id="user-info-opntop">
@@ -120,7 +120,7 @@
                     <p class="desc-cart">
                         <a title="Giỏ hàng" href="./my-shoppingcart.html">
                             <i class="fa fa-shopping-cart"></i>&nbsp;<span class="countShoppingCartPopup">
-                            </span> sản phẩm đã chọn
+                            </span> Sản phẩm đã chọn
                         </a>
                     </p>
                     <span class="hidden strFavouriteProductId">

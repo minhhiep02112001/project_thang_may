@@ -1,38 +1,21 @@
 <footer class="footer3">
     <div class="container">
         <div class="footer-top">
-            <div class="footer-bottom-left">
-                <div class="widget-container">
-                    <ul>
-                        <li><a target="_self" href="./trang-chu.html">Trang chủ</a></li>
-                        <li><a target="_self" href="./gioi-thieu.html">Giới thiệu</a></li>
-                        <li><a target="_self" href="./san-pham.html">Sản phẩm</a></li>
-                        <li><a target="_self" href="./du-an.html">Dự án</a></li>
-                        <li><a target="_self" href="./tin-tuc.html">Tin tức</a></li>
-                        <li><a target="_self" href="./lien-he.html">Liên hệ</a></li>
-                    </ul>
-                </div>
+            <div class="footer-lelf">
+                <ul class="d-flex">
+                    <li><a target="_self" href="/">Trang chủ</a></li>
+                    <li><a target="_self" href="./gioi-thieu.html">Giới thiệu</a></li>
+                    <li><a target="_self" href="./san-pham.html">Sản phẩm</a></li>
+                    <li><a target="_self" href="./du-an.html">Dự án</a></li>
+                    <li><a target="_self" href="./tin-tuc.html">Tin tức</a></li>
+                    <li><a target="_self" href="./lien-he.html">Liên hệ</a></li>
+                </ul>
             </div>
-            <div class="widget-container">
-                <div id="address-box">
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-bottom-right">
-                <div class="widget-container">
-                    <div class="social-link">
-                        <a target="_blank" rel="nofollow"
-                            href="https://www.facebook.com/bacviet.thietkewebsite/"><i
-                                class="fa fa-facebook"></i></a><a target="_blank" rel="nofollow"
-                            href="https://www.instagram.com"><i class="fa fa-instagram"></i></a><a
-                            target="_blank" rel="nofollow" href="https://twitter.com"><i
-                                class="fa fa-twitter"></i></a><a target="_blank" rel="nofollow"
-                            href="https://www.youtube.com"><i class="fa fa-youtube"></i></a><a
-                            target="_blank" rel="nofollow" href="https://www.linkedin.com"><i
-                                class="fa fa-linkedin"></i></a><a href="./rss.html"><i
-                                class="fa fa-rss"></i></a>
-                    </div>
+            <div class="footer-right">
+                <div class="footer-bottom-social text-center d-f">
+                    <a target="_blank" rel="nofollow" href="https://www.facebook.com/DucThanhPr"><i class="fa fa-facebook"></i></a>
+                    <a target="_blank" rel="nofollow" href="https://www.instagram.com/xt.ducthanh/"><i class="fa fa-instagram"></i></a>
+                    <a target="_blank" rel="nofollow"href="https://www.youtube.com"><i class="fa fa-youtube"></i></a>
                 </div>
             </div>
         </div>
@@ -40,10 +23,11 @@
     <div class="footer-coppyright">
         <div class="container">
             <div class="coppyright">
-                © 2021 Copyright by thangmaydep. All rights reserved.
+                © 2021 Copyright by thangmaychat. All rights reserved.
             </div>
         </div>
     </div>
+    
     <div id="ctl00_foot_ctl00_facebook">
         <script>
             window.fbAsyncInit = function() {
@@ -115,7 +99,7 @@
         }
 
         .giuseart-nav ul>li a i.ticon-heart {
-            background: url(./images/icons/icon-map.png) no-repeat;
+            background: url({{ asset('/thangmaydep/layout/images/icons/icon-map.png') }}) no-repeat;
             background-size: contain;
             width: 36px;
             height: 36px;
@@ -123,7 +107,7 @@
         }
 
         .giuseart-nav ul>li a i.ticon-zalo-circle2 {
-            background: url(./images/icons/icon-zalo.png) no-repeat;
+            background: url({{ asset('/thangmaydep/layout/images/icons/icon-zalo.png') }}) no-repeat;
             background-size: contain;
             width: 36px;
             height: 36px;
@@ -135,7 +119,7 @@
         }
 
         .giuseart-nav ul>li a i.ticon-angle-up {
-            background: url(./images/icons/icon-angle-up.png) no-repeat;
+            background: url({{ asset('/thangmaydep/layout/images/icons/icon-angle-up.png') }}) no-repeat;
             background-size: contain;
             width: 36px;
             height: 36px;
@@ -170,7 +154,7 @@
         }
 
         .giuseart-nav ul>li a i.ticon-messenger {
-            background: url(.images/icons/icon-messenger.png) no-repeat;
+            background: url({{ asset('/thangmaydep/layout/images/icons/icon-messenger.png') }}) no-repeat;
             background-size: contain;
             width: 36px;
             height: 36px;
@@ -185,7 +169,7 @@
         }
 
         .giuseart-nav ul>li a i.ticon-chat-sms {
-            background: url(./images/icons/icon-sms.jpg) no-repeat;
+            background: url({{ asset('/thangmaydep/layout/images/icons/icon-sms.jpg') }}) no-repeat;
             background-size: contain;
             width: 38px;
             height: 36px;
@@ -193,7 +177,7 @@
         }
 
         .giuseart-nav ul>li a i.icon-phone-w {
-            background: url(./images/icons/icon-phone.png) no-repeat;
+            background: url({{ asset('/thangmaydep/layout/images/icons/icon-phone.png') }}) no-repeat;
             background-size: contain;
         }
 
@@ -265,22 +249,22 @@
         <ul>
             <li>
                 <a rel="nofollow" class="add-map" href="#"
-                    data-href='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.0030077896113!2d105.82750751533347!3d21.152278588925064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313501009ab91a7d%3A0x957f0641db0bc09a!2zQ-G7lSBExrDGoW5nIFRy4bqhbSAz!5e0!3m2!1svi!2s!4v1620444138133!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'
+                    data-href='<iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100vh&amp;height=50vh&amp;hl=en&amp;q=21 xuân đỉnh&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>'
                     data-title="Tìm đường trên Google Maps">
                     <i class="ticon-heart"></i>Chỉ đường
             </li>
             <li><a target="blank" rel="nofollow" class="chat-zalo" target="_blank"
-                    href="https://zalo.me/0973988848" title="Chát Zalo: 0973988848"><i
+                    href="https://zalo.me/0867140289" title="Chát Zalo: 0867140289"><i
                         class="ticon-zalo-circle2"></i>Chát Zalo</a></li>
-            <li class="phone-mobile"><a class="button" href="tel:0973988848"><span
+            <li class="phone-mobile"><a class="button" href="tel:0867140289"><span
                         class="phone_animation animation-shadow"><i class="icon-phone-w"
                             aria-hidden="true"></i></span><span class="btn_phone_txt">Gọi điện</span></a>
             </li>
             <li><a target="blank" rel="nofollow"
-                    href="https://www.messenger.com/t/bacviet.thietkewebsite"
-                    title="Messenger: bacviet.thietkewebsite"><i class="ticon-messenger"></i>Messenger</a>
+                    href="https://www.messenger.com/t/DucThanhPr"
+                    title="Messenger: DucThanhPr"><i class="ticon-messenger"></i>Messenger</a>
             </li>
-            <li><a class="chat_animation" href="sms:0973988848"><i class="ticon-chat-sms"
+            <li><a class="chat_animation" href="sms:0867140289"><i class="ticon-chat-sms"
                         aria-hidden="true" title="Nhắn tin sms"></i>Nhắn tin</a></li>
         </ul>
     </div>

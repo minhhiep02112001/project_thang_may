@@ -3460,7 +3460,7 @@ blockquote ol {
 }
 
 .ftco-media-1 h3 {
-    font-size: 22px;
+    font-size: 19px;
     color: #000;
     margin-bottom: 0;
     line-height: 28px;
@@ -3564,7 +3564,7 @@ blockquote ol {
 }
 
 .site-section {
-    padding: 2.5em 0;
+    padding: 2.5em 0 0;
 }
 
     .site-section.site-about {
@@ -3864,6 +3864,8 @@ textarea.form-control {
 
 .how-it-works.bg-primary {
     background-color: #71bf44 !important;
+    margin-top: 3rem;
+    padding-bottom: 30px;
 }
     .how-it-works.bg-primary .section-title a, .how-it-works .text-center .second-step .text-dark a {
         color: #fff;
@@ -4590,7 +4592,7 @@ textarea.form-control {
 
 @media (min-width: 768px) {
     .site-section {
-        padding: 5em 0;
+        padding: 3em 0 0;
     }
 
     .large-gutters {

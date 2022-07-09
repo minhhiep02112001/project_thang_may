@@ -55,8 +55,8 @@
                                 <td style="max-width:400px;">{{$banner->title}}</td>
                                 <td align="center">
                                     @if($banner->image)
-                                        <div style="width:150px ; max-height:90px; border:1px solid;">
-                                            <img src="{{ ($banner->image)?$banner->image:'' }}" style="width:100%; " alt="">
+                                        <div style="width:150px ; max-height:90px;">
+                                            <img src="{{ ($banner->image)?$banner->image:'' }}" style="width: auto; height: 48px" alt="">
                                         </div>
                                      @endif
                                 </td>

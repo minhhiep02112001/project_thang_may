@@ -50,6 +50,7 @@
     <meta property="twitter:title" content="Trang chủ Vinwall | Kiến tạo vẻ sang trọng" />
     <meta property="twitter:description" content="Trang chủ" />
     <meta property="twitter:image" content="http://pro2.thietkewebbacviet.com/images/logo/logo_head.png" />
+    @yield('css')
 </head>
 
 <body>
@@ -95,7 +96,7 @@
         <script type="text/javascript" src="{{ asset('thangmaydep/js/theme-script.js')}}"></script>
         <script type="text/javascript" src="{{ asset('thangmaydep/js/wow.js')}}"></script>
         <script type="text/javascript" src="{{ asset('thangmaydep/js/wsocial.js')}}"></script>
-
+        @yield('javascript')
 </body>
 
 </html>
