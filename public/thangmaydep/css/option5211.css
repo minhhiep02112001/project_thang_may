@@ -3877,8 +3877,11 @@ textarea.form-control {
 }
 .how-it-works .text-center .second-step .text-dark {
     line-height: 28px;
-    height: 60px;
+    height: 56px;
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
     .how-it-works .text-center .second-step:hover .text-dark a{
         color:#fff;

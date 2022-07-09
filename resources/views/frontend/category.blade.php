@@ -54,7 +54,7 @@
                                             <option value="10"> Chỉ tiêu biểu</option>
                                         </select>
                                     </div>
-                                    <div class="content-header-right hidden-xs">
+                                    <!-- <div class="content-header-right hidden-xs">
                                         <ul class="display-product-option">
                                             <li class="view-as-grid selected">
                                                 <span></span>
@@ -63,7 +63,7 @@
                                                 <span></span>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="properties-page-wrapper">
                                     <table style="width: 100%;" class="table table-bordered">

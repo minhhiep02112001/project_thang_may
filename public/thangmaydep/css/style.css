@@ -2588,10 +2588,14 @@ span.notify-right {
     .product-list li .product-name {
         padding-bottom: 5px;
         line-height: 22px;
-        height: 48px;
+        height: 43px;
         text-align:center;
         font-size:16px;
         overflow:hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
 
     .product-list li .product-info {
@@ -11311,4 +11315,7 @@ footer.footer5 a {
     #product .pb-left-column .product-image .product-img-thumb li a img {
         height: 105px;
     }
+}
+section#content {
+    padding-top: 30px;
 }
