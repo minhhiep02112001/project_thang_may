@@ -27,7 +27,7 @@ class UsersTableSeeder extends Seeder
 
         $user_id = DB::table('users')->insertGetId([
             'name' => 'Admin',
-            'email' => 'chuminhhiep0211@gmail.com',
+            'email' => 'admin@gmail.com',
             'password' => Hash::make('123456'),
             'is_active' => 1,
             'is_admin' => 1
