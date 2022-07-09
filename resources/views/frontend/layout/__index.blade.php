@@ -20,6 +20,7 @@
     <meta name="document-distribution" content="Global" />
     <meta name="distribution" content="Global" />
     <meta name="placename" content="vietnam" />
+
     <meta name="resource-type" content="Document" />
     <link rel="stylesheet" type="text/css" href="{{ asset('thangmaydep/css/animate.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('thangmaydep/css/bootstrap.min.css') }}" />
