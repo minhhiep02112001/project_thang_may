@@ -39,12 +39,16 @@ Route::group(['prefix' => 'admin', 'middleware' => 'check.login.admin'], functio
     Route::resource('order', 'OrderController');
     Route::get('setting', 'SettingController@index')->name('setting.index');
     Route::post('setting', 'SettingController@update')->name('setting.update');
+    Route::post('setting-category-home', 'SettingController@changeCategoryHome')->name('setting.update.category.home');
+
     Route::get('printf/{id}/order', 'OrderController@printPDF')->name('order.pdf');
 });
 
-
+ 
 
 Route::get('/', 'Client\ClientController@index')->name('shop.home');
+
+
 
 // // route liên hệ
 // Route::get('/lien-he', 'ShopController@contact')->name('contact');
@@ -106,5 +110,6 @@ Route::get('{slug}.htm', 'Client\ClientController@detailArticle')->name('shop.de
 
 
 Route::get('{slug}.html', 'Client\ClientController@detailProduct')->name('shop.product');
+ 
 Route::get('{slug}', 'Client\ClientController@getListProductsByCategory')->name('shop.category');
 

@@ -71,6 +71,7 @@ Controller method   Policy method
     public function store(Request $request)
     {
         // validate dữ liệu :
+        
         $validated = $request->validate(
             [
                 'name' => "required|unique:categories,name|max:255",
@@ -84,6 +85,7 @@ Controller method   Policy method
                 'image.mimes' => 'Image không hợp lệ [ jpg , png , jpeg , gif , svg ]',
             ]
         );
+        
         // Xử lý file
         $image = '';
         if($request->hasFile('image')){
@@ -142,6 +144,7 @@ Controller method   Policy method
     public function edit( Category $danh_muc )
     {
         //
+       
         $categories =Category::where('parent_id',0)->get();
         return view('admin.category.edit', [
             'category' => $danh_muc,
@@ -158,11 +161,12 @@ Controller method   Policy method
      */
     public function update(Request $request, Category $danh_muc)
     {
+       
         // validate dữ liệu
         $validated = $request->validate(
             [
-                'name' => "required|unique:categories,name,$danh_muc->id|max:255",
-                'image' => 'mimes:jpg,png,jpeg,gif,svg',
+                'name' => "required|unique:categories,name,".$danh_muc->id."|max:255",
+                'image' => 'sometimes|file|mimes:jpeg,bmp,png,jpg,gif,svg|max:2048',
             ],
             [
                 'name.required'=> 'Tên danh mục không được để trống !!!',
@@ -171,7 +175,7 @@ Controller method   Policy method
                 'image.mimes' => 'Image không hợp lệ [ jpg , png , jpeg , gif , svg ]',
             ]
         );
-
+    
         $image = "";
 
         if($request->hasFile('image')){
@@ -207,6 +211,7 @@ Controller method   Policy method
             if($image != ""){
                 unlink($image);
             }
+            dd($ex);
             DB::rollback();
             return redirect()->back()->with('error','Lỗi ')->withInput();
         }

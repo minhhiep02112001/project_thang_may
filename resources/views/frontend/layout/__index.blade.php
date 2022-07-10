@@ -12,7 +12,7 @@
     <meta name="author" content="vinwall.vn" />
     <link rel="alternate" href="http://pro2.thietkewebbacviet.com" hreflang="en" />
     <meta name="copyright" content="© 2021 Copyright by DucThanh. All rights reserved." />
-    <link rel="icon" type="image/png" href="{{$setting['logo_icon'] ?? ''}}" />
+    <link rel="icon" type="image/png" href="{{ $setting['logo_icon'] ?? '' }}" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="google-site-verification" content="jkyrwGtdIvdJsWn0AmHKKsRVr8AUG85hiu5VVL32gbs" />
     <meta name="revisit-after" content="1 day" />
@@ -55,48 +55,48 @@
 
 <body>
 
-        <div class="wrap">
-            @include('frontend.layout.__header')
+    <div class="wrap">
+        @include('frontend.layout.__header')
 
-            @yield('content')
+        @yield('content')
 
-            @include('frontend.layout.__footer')
+        @include('frontend.layout.__footer')
 
-        </div>
-        <a href="#" class="scroll-top round"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
-        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                aria-hidden="true">&times;</span></button>
-                        <span class="modal-title"></span>
-                    </div>
-                    <div class="modal-body">
-                        <div id="loadViewPro"></div>
-                    </div>
+    </div>
+    <a href="#" class="scroll-top round"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <span class="modal-title"></span>
+                </div>
+                <div class="modal-body">
+                    <div id="loadViewPro"></div>
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/ajquery-1.11.2.min.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/bootstrap.min.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/jquery-ui.min.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/jquery.actual.min.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/jquery.bxslider.min.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/jquery.elevatezoom.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/jquery.fancybox.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/jquery.plugin.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/loadmore.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/masonry.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/owl.carousel.min.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/select2.min.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/smixitup.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/ssocial.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/star-rating.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/theme-script.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/wow.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('thangmaydep/js/wsocial.js')}}"></script>
-        @yield('javascript')
+    </div>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/ajquery-1.11.2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/jquery-ui.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/jquery.actual.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/jquery.bxslider.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/jquery.elevatezoom.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/jquery.fancybox.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/jquery.plugin.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/loadmore.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/masonry.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/owl.carousel.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/select2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/smixitup.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/ssocial.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/star-rating.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/theme-script.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/wow.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('thangmaydep/js/wsocial.js') }}"></script>
+    @yield('javascript')
 </body>
 
 </html>

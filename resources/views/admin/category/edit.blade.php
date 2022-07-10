@@ -52,8 +52,6 @@
                                     <label>Danh Mục Cha :</label>
                                     <select class="form-control" name="parent_id">
                                         <option value="0">------- Không thuộc danh mục nào -------</option>
-
-
                                         @foreach ($categories as $item)
                                             <option
                                                 value="{{ $item->id }} "{{ $item->id == $category->parent_id ? 'selected' : '' }}>
@@ -85,6 +83,11 @@
                                                 class="btn btn-info btn-flat">Add Image</button>
                                         </span>
                                     </div>
+                                  
+                                    @if ($errors->has('image'))
+                                        <p class="text-danger"><strong>Error : </strong> {{ $errors->first('image') }}
+                                        </p>
+                                    @endif
 
                                     <div class="file-upload-content text-center ">
                                         <img src="{{ $category->image }}"
@@ -122,8 +125,8 @@
 
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" {{ $category->is_active ? 'checked' : '' }} name="is_active"
-                                            value="1"> Hiển thị </label>
+                                        <input type="checkbox" {{ $category->is_active ? 'checked' : '' }}
+                                            name="is_active" value="1"> Hiển thị </label>
                                 </div>
                             </div>
                             <!-- /.box-body -->

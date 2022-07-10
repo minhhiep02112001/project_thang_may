@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Category;
 use Illuminate\Http\Request;
 use App\Model\Setting;
 use Illuminate\Support\Facades\Auth;
@@ -28,13 +29,25 @@ class SettingController extends Controller
             orWhere('key', 'address')->
             orWhere('key', 'phone')->
             orWhere('key', 'introduce')->
-            orWhere('key', 'tax')->get()->toArray();
+            orWhere('key', 'categories_home')->
+            orWhere('key', 'tax')->get();
             $setting = [];
-            foreach ($arr as $key => $value) {
-                $setting[$value['key']] = $value['value'];
+
+            foreach ($arr as $item) {
+                if ($item['key'] == "categories_home") $item['value'] = $arrId = json_decode($item['value']);
+                $setting[$item['key']] = $item['value'];
             }
 
-            return view('admin.setting.index', compact('setting'));
+            $categories = Category::where('is_active', 1)->where(function ($query) {
+                return $query->where('type', 0)->orWhere('type', 1);
+            })->select('id', 'name', 'image', 'slug', 'parent_id', 'type')->get();
+
+            if (!empty($arrId)) {
+                $arrId = array_column($arrId , 'id');
+                $categories = $categories->whereNotIn('id' , $arrId);
+            }
+
+            return view('admin.setting.index', compact('setting', 'categories'));
         } else {
             return abort('403');
         }
@@ -66,8 +79,31 @@ class SettingController extends Controller
                 ]
             );
         }
-        dd("done");
-        return redirect()->route('setting.index')->with('success', 'Tạo thành công !!!');
 
+        return redirect()->route('setting.index')->with('success', 'Tạo thành công !!!');
+    }
+
+    function changeCategoryHome(Request $request)
+    {
+        $data = data_tree_api_menu_class($request->menus);
+        try {
+            Setting::updateOrCreate(
+                [
+                    'key' => 'categories_home'
+                ], [
+                    'key' => 'categories_home',
+                    'value' => json_encode($data),
+                ]
+            );
+            return response()->json([
+                "status" => true,
+                "message" => "Thành công"
+            ], 200);
+        } catch (\Exception $ex) {
+            return response()->json([
+                "status" => false,
+                "message" => $ex->getMessage()
+            ], 500);
+        }
     }
 }

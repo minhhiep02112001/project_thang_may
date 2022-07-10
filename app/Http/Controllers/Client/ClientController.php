@@ -49,24 +49,23 @@ class ClientController extends Controller
             'type' => 7
         ])->orderBy('position', 'asc')->select('id', 'title', 'description', 'image', 'slug', 'url', 'target')->take(6)->get();
 
-        $id = [7, 8, 9, 52, 11];
-        foreach ($id as $key) {
-            $categories = Category::whereIn('id', $id)->where('is_active', 1)->select(['id', 'name', 'slug'])->get();
+        $categories_home = getValueSetting('categories_home');
+
+        if (!empty($categories_home)) {
+            $categories_home = json_decode($categories_home);
+            $ids = array_column($categories_home, 'id');
         }
 
+        $categories = Category::whereIn('id', $ids ?? [])->where('is_active', 1)->select(['id', 'name', 'slug', 'type'])->get();
+
         $categories->transform(function ($item) {
-            $item->products = $item->products()->select(['products.id', 'products.name', 'products.slug', 'products.image'])->orderBy('updated_at', 'desc')->take(6)->get();
+            $item->products = $item->products()->select(['products.id', 'products.name', 'products.slug', 'products.image'])->orderBy('updated_at', 'desc')->take(8)->get();
             return $item;
         });
-
-        $categories_project = $this->clientService->getMenu(1);
-        $arrCateProjects = $categories_project ? $categories_project->pluck('id')->toArray() : [];
-
-        $product_projects = Product::where('is_active',1)->whereIn('category_id' , $arrCateProjects)->orderBy("updated_at" , 'desc')->take(4)->get();
         return view('frontend.index', [
             'banners' => $banners,
             'categories' => $categories,
-            'product_projects'=>$product_projects,
+//            'product_projects' => $product_projects,
             'bannerQuality' => $bannerQuality
         ]);
     }
@@ -77,9 +76,11 @@ class ClientController extends Controller
     {
 
         // Lấy tất cả danh mục cha của  danh mục con;
-        $category = Category::where('is_active', 1)->where('slug', $slug)->where('type', 0)->select('id', 'name', 'slug', 'parent_id')->first();
+        $category = Category::where('is_active', 1)->where('slug', $slug)->where(function ($query) {
+            return $query->where('type', 0)->orWhere('type', 1);
+        })->select('id', 'name', 'image', 'slug', 'parent_id')->first();
 
-        if (!$category) return abort(404);
+        if (!$category) abort(404);
 
         $categories = Category::where('is_active', 1)->where('type', 0)->select('id', 'name', 'slug', 'parent_id')->get()->toArray();
 
@@ -88,7 +89,6 @@ class ClientController extends Controller
         $categoryChildren = getChildrenCategory($categories, $category->id);
 
         if (!empty($categoryChildren)) {
-
             $arr_id = array_column($categoryChildren, 'id');
             $products = Product::whereIn('category_id', $arr_id)->where('is_active', 1);
         } else {
@@ -380,11 +380,13 @@ class ClientController extends Controller
     }
 
 
-    function informationWeb(){
+    function informationWeb()
+    {
         return view('frontend.information');
     }
 
-    function getContact(){
+    function getContact()
+    {
         return view('frontend.contact');
     }
 

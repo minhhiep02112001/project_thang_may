@@ -42,6 +42,30 @@ if (!function_exists('getImageThumb')) {
     }
 }
 
+function getCateName($id){
+    return \App\Model\Category::select(['id' , 'name' , 'slug' , 'type'])->find($id);
+}
+
+function data_tree_api_menu_class($data)
+{
+    $result = [];
+    foreach ($data as $item) {
+        if (empty($item)) {
+            continue;
+        }
+        $attr = getCateName($item['id'])->toArray();
+        if (!empty($item['children'])) {
+            $item['attr'] = $attr;
+            $item['children'] = data_tree_api_menu_class($item['children']);
+            array_push($result, $item);
+        } else {
+            $item['attr'] = $attr;
+            array_push($result, $item);
+        }
+    }
+    return $result;
+}
+
 function getImageConvert($item , $class = "" , $w = 0, $height = 0){
     return "<img src='".getImageThumb($item->image , $w, $height)."' alt='{$item->name}' loading='$class'/>";
 }
