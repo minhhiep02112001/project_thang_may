@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Client;
 
 use App\Model\Category;
 use App\Model\Contact;
+use App\Model\Order;
 use App\Model\ProductImage;
 use App\Services\SettingClientService;
 use Illuminate\Http\Request;
@@ -14,6 +15,7 @@ use App\Model\Brand;
 use App\Model\Product;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class ClientController extends Controller
 {
@@ -198,18 +200,22 @@ class ClientController extends Controller
 
         try {
             DB::beginTransaction();
-            Contact::create([
+            $contact = Contact::create([
                 'name' => $request->fullname,
                 'phone' => $request->phone,
                 'email' => $request->email,
                 'content' => $request->get('contents')
             ]);
+
             DB::commit();
+
+            Mail::to(getValueSetting('email'))->send(new \App\Mail\Contact($contact));
+
         } catch (\Exception $ex) {
             DB::rollback();
-            return redirect()->back()->with('status', 'Lỗi hệ thống');
+            return redirect()->back()->with('error', 'Lỗi hệ thống');
         }
-        return redirect()->back()->with('status', 'Cảm ơn bạn đã góp ý với chúng tôi');
+        return redirect()->back()->with('success', 'Cảm ơn bạn đã góp ý với chúng tôi');
     }
 
     // tìm kiếm

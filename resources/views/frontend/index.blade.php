@@ -29,7 +29,8 @@
             @if(!empty($categories))
                 @foreach($categories as $key=>$category)
                     @if($category->type ==0 )
-                        @if(!empty($item->products))
+
+                        @if( $category->products->count() > 0)
                             <div id="ctl00_ContentPlaceHolder1_PageView1_ctl00_RepeaterCategory_ctl01_Panel1"
                                  class="product-home">
                                 <div class="site-section" id="san-pham-ngoai-that">
@@ -73,7 +74,8 @@
                             </div>
                         @endif
                     @else
-                        @if(!empty($item->products))
+
+                        @if( $category->products->count() > 0)
                             <div id="ctl00_ContentPlaceHolder1_PageView1_ctl00_RepeaterCategory_ctl02_Panel5"
                                  class="album project">
                                 <div class="py-5 bg-primary site-section how-it-works" id="du-an">
