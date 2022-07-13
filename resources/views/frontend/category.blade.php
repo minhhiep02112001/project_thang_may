@@ -37,7 +37,7 @@
                                 </div>
                                 <div class="content-header clearfix">
                                     <div class="content-header-left">
-                                        <select name="ctl00$ContentPlaceHolder1$PageView1$ctl00$DropDownListSortBy"
+                                        <!-- <select name="ctl00$ContentPlaceHolder1$PageView1$ctl00$DropDownListSortBy"
                                                 onchange=""
                                                 id="ctl00_ContentPlaceHolder1_PageView1_ctl00_DropDownListSortBy"
                                                 title="Sort by" class="drop-sort">
@@ -52,7 +52,7 @@
                                             <option value="8"> Giảm giá thấp đến cao</option>
                                             <option value="9"> Chỉ sản phẩm mới</option>
                                             <option value="10"> Chỉ tiêu biểu</option>
-                                        </select>
+                                        </select> -->
                                     </div>
                                     <!-- <div class="content-header-right hidden-xs">
                                         <ul class="display-product-option">

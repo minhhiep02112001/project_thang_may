@@ -4778,7 +4778,11 @@ textarea.form-control {
     .logo-des {
         display: none;
     }
-    .logo-mb{display:block;}
+    .logo-mb{
+        display:block;
+        width: 50%;
+        float: left;
+    }
     .product-home .large-gutters .mb-5 {
         width: 50%;
         float: left;
@@ -5110,7 +5114,7 @@ textarea.form-control {
 
     #main-menu .navbar-header .navbar-toggle {
         margin-right: 0;
-        margin-top: 16px;
+        margin-top: 5px;
     }
 
     .sales-hotline i.hidden-xs {

@@ -3,15 +3,15 @@
 
 <head>
     <meta charset="utf-8"/>
-    <title> Thang máy đẹp </title>
-    <meta name="description" content="Trang chủ"/>
+    <title> Thang Máy Chất </title>
+    <meta name="description" content="ThangMayChat | Kiến tạo vẻ sang trọng"/>
     <meta name="keywords"/>
     <meta name="viewport" content="width=device-width"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="author" content="vinwall.vn"/>
-    <link rel="alternate" href="http://pro2.thietkewebbacviet.com" hreflang="en"/>
-    <meta name="copyright" content="© 2021 Copyright by DucThanh. All rights reserved."/>
+    <meta name="author" content="thangmaychat.vn"/>
+    
+    <meta name="copyright" content="© 2021 Copyright by thangmaychat. All rights reserved."/>
     <link rel="icon" type="image/png" href="{{ $setting['logo_icon'] ?? '' }}"/>
     <meta name="robots" content="noindex, nofollow"/>
     <meta name="google-site-verification" content="jkyrwGtdIvdJsWn0AmHKKsRVr8AUG85hiu5VVL32gbs"/>
@@ -37,21 +37,17 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('thangmaydep/css/style.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('thangmaydep/css/wresponsive.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('thangmaydep/cssfiles/option5211.css') }}"/>
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script><![endif]-->
-    <link rel="canonical" href="http://pro2.thietkewebbacviet.com/"/>
-    <link rel="canonical" href="http://pro2.thietkewebbacviet.com/"/>
-    <meta property="og:title" content="Trang chủ ThangMayDep | Kiến tạo vẻ sang trọng"/>
+
+
+    <meta property="og:title" content="ThangMayChat | Kiến tạo vẻ sang trọng"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:image" content="http://pro2.thietkewebbacviet.com/images/logo/logo_head.png"/>
-    <meta property="og:url" content="http://pro2.thietkewebbacviet.com/"/>
-    <meta property="og:description" content="Trang chủ"/>
+    <meta property="og:image" content="{{ $setting['logo_icon'] ?? '' }}"/>
+    <meta property="og:url" content="http://thangmaychat.com/"/>
+    <meta property="og:description" content="ThangMayChat | Kiến tạo vẻ sang trọng"/>
     <meta property="twitter:card" content="summary"/>
-    <meta property="twitter:title" content="Trang chủ Vinwall | Kiến tạo vẻ sang trọng"/>
+    <meta property="twitter:title" content="ThangMayChat | Kiến tạo vẻ sang trọng"/>
     <meta property="twitter:description" content="Trang chủ"/>
-    <meta property="twitter:image" content="http://pro2.thietkewebbacviet.com/images/logo/logo_head.png"/>
+    <meta property="twitter:image" content="{{ $setting['logo_icon'] ?? '' }}"/>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @yield('css')
 </head>

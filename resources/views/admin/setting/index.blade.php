@@ -130,8 +130,8 @@
                                         <div class="row pl-3"
                                              style="padding-left:10px; max-height: 500px; overflow: auto">
                                             <div class="col-md-12 p-0">
-                                                <div class="custom-dd dd" id="nestable">
-                                                    {{--                                                    @if (!empty($setting['categories_home']))--}}
+                                                <div class="custom-dd dd" id="nestable"> 
+                                                                                         @if (!empty($setting['categories_home'])) 
                                                     <ol class="dd-list">
                                                         @foreach ($setting['categories_home'] as $item)
                                                             <li class="dd-item" data-id="{{ $item->id }}">
@@ -139,9 +139,9 @@
                                                             </li>
                                                         @endforeach
                                                     </ol>
-                                                    {{--                                                    @endif--}}
+                                                                                    @endif 
 
-                                                    {{-- {!! getTreeSettingMenuLi($menu) !!} --}}
+                                                 
                                                 </div>
 
                                             </div><!-- end col -->

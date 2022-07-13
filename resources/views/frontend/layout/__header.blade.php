@@ -42,7 +42,7 @@
 
                                                         <li class="img_container">
                                                             <a target="_self" href="{{route('shop.category' , ['slug'=>$item->slug])}}">
-                                                                <img src="{{asset('frontend/imgcategory/2021051195339_40744.jpg')}}" alt="Sản phẩm nội thất" loading="lazy">
+                                                                <img src="{{asset($item->image)}}" alt="Sản phẩm nội thất" loading="lazy">
                                                             </a>
                                                         </li>
                                                         <li class="link_container group_header">

@@ -109,7 +109,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="fb-like fb_iframe_widget"
-                                                     data-href="http://pro2.thietkewebbacviet.com/mau-web/5211/v409-08.html"
+                                                     data-href=""
                                                      data-layout="button_count" data-width="100" data-show-faces="true"
                                                      data-share="true" data-font="arial" fb-xfbml-state="rendered"
                                                      fb-iframe-plugin-query="app_id=177818186309740&amp;container_width=0&amp;font=arial&amp;href=http%3A%2F%2Fpro2.thietkewebbacviet.com%2Fmau-web%2F5211%2Fv409-08.html&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;width=100">
@@ -122,48 +122,6 @@
                                                             src="https://www.facebook.com/v3.2/plugins/like.php?app_id=177818186309740&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df2f5daf044ba19c%26domain%3Dlocalhost%26is_canvas%3Dfalse%26origin%3Dhttp%253A%252F%252Flocalhost%253A63342%252Ff1bfa9a71b22898%26relation%3Dparent.parent&amp;container_width=0&amp;font=arial&amp;href=http%3A%2F%2Fpro2.thietkewebbacviet.com%2Fmau-web%2F5211%2Fv409-08.html&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;width=100"
                                                             style="border: none; visibility: visible; width: 150px; height: 28px;"
                                                             class=""></iframe></span></div>
-                                            </li>
-                                            <li class="xht lin">
-                                                <script src="https://platform.linkedin.com/in.js"
-                                                        type="text/javascript">lang: en_US</script>
-                                                <span class="IN-widget"
-                                                      data-lnkd-debug="<script type=&quot;IN/Share+init&quot; data-url=&quot;http://pro2.thietkewebbacviet.com/mau-web/5211/v409-08.html&quot;></script>"
-                                                      style="display: inline-block; line-height: 1; vertical-align: bottom; padding: 0px; margin: 0px; text-indent: 0px; text-align: center;"><span
-                                                        style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: bottom !important; font-size: 1px !important;"><button
-                                                            class="IN-74a7d7b0-81d1-4475-af64-727c42231d82-1G9ISYhSF8XoOmdcl0yKDu"><xdoor-icon
-                                                                aria-hidden="true"><svg viewBox="0 0 24 24" width="24px"
-                                                                                        height="24px" x="0" y="0"
-                                                                                        preserveAspectRatio="xMinYMin meet">
-      <g style="fill: currentColor">
-        <rect x="-0.003" style="fill:none;" width="24" height="24"></rect>
-        <path style=""
-              d="M20,2h-16c-1.1,0-2,0.9-2,2v16c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4C22,2.9,21.1,2,20,2zM8,19h-3v-9h3V19zM6.5,8.8C5.5,8.8,4.7,8,4.7,7s0.8-1.8,1.8-1.8S8.3,6,8.3,7S7.5,8.8,6.5,8.8zM19,19h-3v-4c0-1.4-0.6-2-1.5-2c-1.1,0-1.5,0.8-1.5,2.2V19h-3v-9h2.9v1.1c0.5-0.7,1.4-1.3,2.6-1.3c2.3,0,3.5,1.1,3.5,3.7V19z"></path>
-      </g>
-    </svg></xdoor-icon>Share</button></span></span>
-                                            </li>
-                                            <li class="xht bm">
-                                                <span class="PIN_1656083021099_button_pin PIN_1656083021099_save"
-                                                      data-pin-log="button_pinit_bookmarklet"
-                                                      data-pin-href="https://www.pinterest.com/pin/create/button/">Save</span>
-
-                                            </li>
-                                            <li class="xht tw">
-                                                <iframe id="twitter-widget-0" scrolling="no" frameborder="0"
-                                                        allowtransparency="true" allowfullscreen="true"
-                                                        class="twitter-share-button twitter-share-button-rendered twitter-tweet-button"
-                                                        style="position: static; visibility: visible; width: 73px; height: 20px;"
-                                                        title="Twitter Tweet Button"
-                                                        src="https://platform.twitter.com/widgets/tweet_button.d7fc2fc075c61f6fa34d79a0cbbf1e34.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Flocalhost%3A63342%2Fthangmay%2Fpublic%2Fthangmaydep%2Fv1834-34.html%3F_ijt%3Demg7eethrp3rvt8r677acu4mc2%26_ij_reload%3DRELOAD_ON_SAVE&amp;size=m&amp;text=Thang%20m%C3%A1y%20%C4%91%E1%BA%B9p&amp;time=1656083021623&amp;type=share&amp;url=http%3A%2F%2Fpro2.thietkewebbacviet.com%2Fmau-web%2F5211%2Fv409-08.html"
-                                                        data-url="http://pro2.thietkewebbacviet.com/mau-web/5211/v409-08.html"></iframe>
-                                                <script>!function (d, s, id) {
-                                                        var js, fjs = d.getElementsByTagName(s)[0];
-                                                        if (!d.getElementById(id)) {
-                                                            js = d.createElement(s);
-                                                            js.id = id;
-                                                            js.src = "//platform.twitter.com/widgets.js";
-                                                            fjs.parentNode.insertBefore(js, fjs);
-                                                        }
-                                                    }(document, "script", "twitter-wjs");</script>
                                             </li>
                                         </ul>
                                     </section>
