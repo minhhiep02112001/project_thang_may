@@ -22,12 +22,12 @@
                                          src="{{asset($product->image)}}" alt="{{$product->name}}"></a>
                             </div>
                             <div class="product-img-thumb" id="gallery_01">
-                                <ul class="owl-carousel owl-theme owl-loaded" data-items="3" data-nav="true"
+                                <!-- <ul class="owl-carousel owl-theme owl-loaded" data-items="3" data-nav="true"
                                     data-dots="false" data-margin="10" data-loop="false">
                                     <div class="owl-stage-outer">
                                         <div class="owl-stage"></div>
                                     </div>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>

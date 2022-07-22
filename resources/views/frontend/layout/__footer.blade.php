@@ -5,8 +5,8 @@
                 <ul class="d-flex">
                     <li><a target="_self" href="/">Trang chủ</a></li>
                     <li><a target="_self" href="./gioi-thieu.html">Giới thiệu</a></li>
-                    <li><a target="_self" href="./san-pham.html">Sản phẩm</a></li>
-                    <li><a target="_self" href="./du-an.html">Dự án</a></li>
+                    <li class="mobileNone"><a target="_self" href="./san-pham.html">Sản phẩm</a></li>
+                    <li class="mobileNone"><a target="_self" href="./du-an.html">Dự án</a></li>
                     <li><a target="_self" href="./tin-tuc.html">Tin tức</a></li>
                     <li><a target="_self" href="./lien-he.html">Liên hệ</a></li>
                 </ul>

@@ -113,6 +113,9 @@
   -ms-user-select: none;
   user-select: none;
 }
+.product-list .owl-carousel .owl-item {
+  width: 165px !important;
+}
 .owl-carousel .owl-item img {
   display: block;
   width: 100%;

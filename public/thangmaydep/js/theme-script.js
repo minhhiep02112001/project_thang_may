@@ -1782,7 +1782,7 @@
                     items: 3,
                     nav: true,
                     smartSpeed: 1000,
-                    navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
+                    // navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
                 }
             );
             owl.trigger('next.owl.carousel');
@@ -1812,7 +1812,7 @@
                     items: 3,
                     nav: false,
                     smartSpeed: 1000,
-                    navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
+                    // navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
                 }
             );
             owl.trigger('next.owl.carousel');
@@ -1848,7 +1848,7 @@
                     items: 1,
                     nav: true,
                     smartSpeed: 1000,
-                    navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
+                    // navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
                 }
             );
         }

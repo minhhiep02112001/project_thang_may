@@ -20,8 +20,8 @@
                                     <div class="hamburger">
                                         <span class="line"></span>
                                         <span class="line"></span>
-                                        <span class="line"></span><span class="line"></span><span
-                                            class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
                                     </div>
                                 </button>
                                 <a class="navbar-brand" href="#">MENU</a>
